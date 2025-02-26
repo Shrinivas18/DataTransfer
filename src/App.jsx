@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import Component from './Component'
+import Component from './components/Component'
+import RegForm from './components/RegForm'
 
 function App() {
   const [count, setCount] = useState(0)
   const [multiCount, setMult] = useState(1)
+  const [loading, setLoading] = useState(false)
   
   let name=["Shrinivas", "Verma","Sharma"];
   let BankDetails={
@@ -16,7 +18,7 @@ function App() {
     Branch: "Dongargarh",
     HQ: "Delhi",
     AmountDetails(){
-      let sal=this.salary;
+      let sal=this.Salary;
       let interest=0;
       let total=0;
       for(let i=1;i<=this.yearsOfInvertment;i++){
@@ -24,7 +26,7 @@ function App() {
         total+=sal+interest;
         sal=total;        
       }
-      return total;
+      return Number(total);
     }
 
   }
@@ -36,8 +38,16 @@ function App() {
     return setMult(1);
 
   }
+
+
   return (
     <>
+      {/* in JSX in place of if we use ternary operator */}
+      <div>
+        <RegForm />
+      </div>
+      {loading ? "loading...":"Not Loading"}
+      
       <div>
         <p><strong>Count: {count}</strong></p>
         <button onClick={()=>setCount(count+1)}>+1</button>
@@ -51,6 +61,7 @@ function App() {
       <div>
         <Component name={name} BankDetails={BankDetails}/>
       </div>
+      
     </>
   )
 }

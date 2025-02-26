@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import './App.css';
+import '../App.css';
 
 // eslint-disable-next-line react/prop-types
 function Component({name,BankDetails}) {
@@ -12,7 +12,7 @@ function Component({name,BankDetails}) {
 
     const BankDetailsArray = Object.entries({
         ...BankDetails, 
-        AmountDetails: BankDetails.AmountDetails() || "N/A"
+        AmountDetails: BankDetails.AmountDetails()
       });
 
   return (
@@ -39,7 +39,7 @@ function Component({name,BankDetails}) {
                 </tr>
             </thead>
             <tbody>
-                {BankDetailsArray.map(([key,value],index)=>(
+                {BankDetailsArray?.map(([key,value],index)=>(
                 <tr key={index}>
                     <td>{key}</td>
                     <td>{value}</td>
