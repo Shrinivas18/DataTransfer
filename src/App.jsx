@@ -7,6 +7,27 @@ function App() {
   const [multiCount, setMult] = useState(1)
   
   let name=["Shrinivas", "Verma","Sharma"];
+  let BankDetails={
+    AccHolder:"Shrinivas",
+    Salary:500000,
+    InterestPerAnnum:12,
+    yearsOfInvertment:5,
+    AccNumber:125548484,
+    Branch: "Dongargarh",
+    HQ: "Delhi",
+    AmountDetails(){
+      let sal=this.salary;
+      let interest=0;
+      let total=0;
+      for(let i=1;i<=this.yearsOfInvertment;i++){
+        interest=this.InterestPerAnnum*sal/100;
+        total+=sal+interest;
+        sal=total;        
+      }
+      return total;
+    }
+
+  }
 
   function resetCount(){
     return setCount(0);
@@ -28,7 +49,7 @@ function App() {
         <button onClick={()=>resetMult()}>Reset</button>
       </div>
       <div>
-        <Component name={name} />
+        <Component name={name} BankDetails={BankDetails}/>
       </div>
     </>
   )
