@@ -4,6 +4,8 @@ import Component from "./components/Component";
 import RegForm from "./components/RegForm";
 import AdvancedRegForm from "./components/AdvancedRegForm";
 import Products from "./components/Products";
+import ProductList from "./components/ProductList";
+import ProductListCard from "./components/ProductListCard";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -44,8 +46,8 @@ function App() {
     <>
       {/* in JSX in place of if we use ternary operator */}
 
-      <Products />
-
+      <ProductList />
+      {/* <>
       <div>
         Show Advanced Reg Form only
         <input
@@ -82,6 +84,7 @@ function App() {
           </div>
         </>
       )}
+      </> */}
     </>
   );
 }
