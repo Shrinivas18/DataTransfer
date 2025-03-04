@@ -6,6 +6,7 @@ import AdvancedRegForm from "./components/AdvancedRegForm";
 import Products from "./components/Products";
 import ProductList from "./components/ProductList";
 import ProductListCard from "./components/ProductListCard";
+import MultiTabForm from "./components/MultiTabForm";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -46,7 +47,8 @@ function App() {
     <>
       {/* in JSX in place of if we use ternary operator */}
 
-      <ProductList />
+      {/* <ProductList /> */}
+      <MultiTabForm />
       {/* <>
       <div>
         Show Advanced Reg Form only
