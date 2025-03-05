@@ -26,3 +26,39 @@
     background-color: bisque;
     border: 1px solid black;
 }
+
+.formContainer {
+    border: 1px solid green;
+    width: 40vw;
+    height: auto; 
+    margin-bottom: 5px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* align-items: center; */
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.inputContainer label {
+    width: 70px; 
+    text-align: right;
+    font-weight: bold;
+}
+
+.inputContainer input {
+    flex: 1; 
+    padding: 5px;
+    font-size: 16px;
+}
+
+.btn{
+    
+}
